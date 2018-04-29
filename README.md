@@ -1,18 +1,16 @@
 # JMI
 
-This document contains all  codes for simulations of "Jackknifed Mutual Information - an Efficient and Numerically Stable Measure of Dependence".
+This folder contains all the codes for our simulations.
 
-The codes involves several R packages:
-'FOREACH', 'doSNOW', 'FNN', 'HHG', 'minerva', 'energy', 'copula', 'ks','mJMI'.
-The file 'install packages.r'is for installing them.
+Our simulation involves the following R packages: 'FOREACH', 'doSNOW', 'FNN', 'HHG', 'minerva', 'energy', 'copula', 'ks','mJMI'.  We provide the file 'install packages.r' to install all of them.
 
-File 'mJMI_0.1.0.zip' contains the R package for JMI method, including estimation of mutual information and calculation of statistical power of independence test based on JMI.
+File 'mJMI_0.1.0.zip' is the R package for our JMI method. It implements the estimation of mutual information and calculation of p-values for independence test. It can be installed directly under R.
 
-The file 'Estimation efficiency' contains the codes for calculating MSEs for different methods, models and sample sizes. Results for 'mJMI', 'rule of thumb KDE', 'lscv KDE' and 'Plug in KDE' are calculated in R; 
-results for Mixed KSG and copula based KSG are calculated in Python; results for Mirrored KDE are calculated in matlab.
+Subfolder 'Estimation efficiency' contains the codes for calculating MSEs for different methods, models and sample sizes.  Because the codes provided by their corresponding authors were written using different languages, we put those code under different sub-subfolders  
 
-The file 'Estimation efficiency' contains the codes for calculating statistical power of independence test for different methods, models and noise levels. All the simulations are conducted in R.
+ (1) sub-subfolder R contains 'mJMI', 'rule of thumb KDE', 'lscv KDE' and 'Plug in KDE';
+ (2) sub-subfolder Python contains 'Mixed KSG' and 'copula based KSG' (see https://github.com/wgao9/mixed_KSG);
+ (3) sub-subfolder Matlab contains 'Mirrored KDE' (see https://github.com/sss1/mirror-kde).
 
-For Mixed-KSG method, the code can be also found at https://github.com/wgao9/mixed_KSG.
+Subfolder 'Testing power' contains the codes for calculating statistical power of independence for different methods, models and noise levels. All the simulations are conducted in R. 
 
-For Mirrored KDE method, the code can be also found at https://github.com/sss1/mirror-kde.
